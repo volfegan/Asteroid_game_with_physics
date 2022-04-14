@@ -1,3 +1,5 @@
-# Asteroid game minimal working physics using GJK Algorithm for collision detection
+# Asteroid game with minimal physics
+
+
 
 
