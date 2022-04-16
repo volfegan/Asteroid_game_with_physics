@@ -17,11 +17,13 @@ I made this game just to test how well the [GJK algorithm](https://github.com/vo
 
 #### Game mechanics:
 
-Controls inputs are A,D [spin the ship] / S [shield] / W [thrusters] / Spacebar [shoot/charge energy] / Enter [new game]. Only one control input action per frame. And while charging the particle wave cannon, little control on other inputs. Big asteroids generate 20 points and need 2 shots to be destroyed, while small ones generate 10 points and need only 1 shot. The ship colliding with shields activate can only destroy small asteroids, but weakens big ones (only one extra shot needed to destroy it). The game has a very 8-bit sounds the closest I could do to match the [original sounds of the asteroid game](http://www.classicgaming.cc/classics/asteroids/sounds). I only made 5 sounds for shooting normal bullets, particle wave cannon shot, shield, explosion, and ship's thrusters. 
+Controls inputs are A,D [spin the ship] / S [shield] / W [thrusters] / Spacebar [shoot/charge energy] / Enter [new game]. Only one control input action per frame. And while charging the particle wave cannon, little control on other inputs. Big asteroids generate 20 points and need 2 shots to be destroyed, while small ones generate 10 points and need only 1 shot. The ship colliding with activated shields can destroy small asteroids, but only weakens big ones (only one extra shot needed to destroy it). The game has a very 8-bit sounds the closest I could do to match the [original sounds of the asteroid game](http://www.classicgaming.cc/classics/asteroids/sounds). I only made 5 sounds for shooting normal bullets, particle wave cannon shot, shield, explosion, and ship's thrusters. 
 
 #### Geometric Algorithms references
 
 Now the actual usefull stuff! The references used on each function are in their header comment.
+* Compute the intersection point between two segments: functions  intersectPoint(PVector segmentPoint1, PVector segmentPoint2, 
+    PVector segmentPointA, PVector segmentPointB), and outOfRange(PVector p, PVector segmentPointA, PVector segmentPointB) in Bullet class.
 * Compute polygon area: function computeMass(PVector[] vertices) in class Asteroid and Ship. I used Area = Mass.
 * Compute mass moment of inertia: functions computeMomentOfInertia(PVector[] vertices), and momentOfInertiaOfTriangle(PVector[] triangle) in class Asteroid and Ship.
 * Compute polygon centre: function calculateCentre(PVector[] vertices) in class Asteroid and Ship.
