@@ -29,19 +29,19 @@ Now the actual usefull stuff! The references used on each function are in their 
 * Elastic collision linear momentum for velocity updates: functions updateVelocity(PVector v, float mass) in Asteroid class, and updateVelocity(PVector v, float mass, PVector centroid) in Ship class.
 * Screen space-warping (toroidal mapping) without artifacts: function warpCoordinates(int[] warpCoordinatesMap, PVector point), warpCoordinates(PVector[] vertices),  warpOperations(PVector[] vertices), findIndexOfExtremePoints(), and updatePosition() in class Asteroid and Ship.
      
-     
+         Space folding!
            .      .   . .   .  +   .    .         
                              .       .      .
-           .     *
-            .       *           . .     +  *
-          .               :.       +   . 
+              .     *
+         .       *               . .     +  *
+            .               :.       +   . 
           .  .   .  + .                         .  *
-               ______________________     .
-              / +.         .   *     "-_           .
-             /   .- Y -.                \      +
-            /   : \ | / ;    +   .       \      .
-           /  +  '-___-'   .   .    + .   \
-          /_______________________________|    .     .
+               _____________________     .
+              / +.         .   *    "-_           .
+             /   .- Y -.               \      +
+            /   : \ | / ;    +   .      \      .
+           /  +  '-___-'   .   .    + .  \
+          /_______________________________\    .     .
                ____| |________________.J' #L
               /.+  J L   .   .     . +..    \    *  .   +
              /    / ! \     +   .            L
