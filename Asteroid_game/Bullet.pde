@@ -161,6 +161,15 @@ public class Bullet {
       || Float.isNaN(intersection.x) || Float.isNaN(intersection.y)) {
       intersection = null;
     }
+    //check if end points of a segment is the intersection 
+    if (intersection == null) {
+      if ((s1.x==sA.x && s1.y==sA.y) || (s2.x==sA.x && s2.y==sA.y)) {
+        intersection = sA;
+      }
+      if ( (s1.x==sB.x && s1.y==sB.y) || (s2.x==sB.x && s2.y==sB.y)) {
+        intersection = sB;
+      }
+    }
 
     return intersection;
   }
