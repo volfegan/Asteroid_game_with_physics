@@ -10,7 +10,7 @@ I made this game just to test how well the [GJK algorithm](https://github.com/vo
 
 #### Game mechanics:
 
-Controls inputs are A,D [spin the ship] / S [shield] / W [thrusters] / Spacebar [shoot/charge energy] / Enter [new game]. Only one control input action per frame. And while charging the particle wave cannon, little control on other inputs. Big asteroids generate 20 points and need 2 shots to be destroyed, while small ones generate 10 points and need only 1 shot. The ship colliding with activated shields can destroy small asteroids, but only weakens big ones (only one extra shot needed to destroy it).
+Controls inputs are A,D [spin the ship] / S [shield] / W [thrusters] / Spacebar [shoot/charge energy] / Enter [new game]. Only one control input action per frame. And while charging the particle wave cannon, little control on other inputs. Destroying a big asteroid will create 2 or 3 small ones from its debris. Big asteroids generate 20 points and need 2 shots to be destroyed, while small ones generate 10 points and need only 1 shot. The ship colliding with activated shields can destroy small asteroids, but only weakens big ones (only one extra shot needed to destroy it).
 
 #### Knowing bugs:
 * Sometimes, the particle wave cannon destroys asteroids even without any visible intersection. Probably some weirdness on asteroid mirror-vertices location when they are not warping from one side of the screen to another. Normally occurs after new batch of big asteroids are created. No idea why this happens.
