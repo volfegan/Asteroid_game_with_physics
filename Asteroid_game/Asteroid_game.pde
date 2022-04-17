@@ -65,7 +65,7 @@ void keyReleased() {
 }
 
 void setup() {
-  size(1290, 730);
+  size(1280, 720);
   stroke(0, 255, 0);
   rectMode(CENTER);
   noFill();
