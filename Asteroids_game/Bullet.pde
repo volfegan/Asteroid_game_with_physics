@@ -130,7 +130,7 @@ public class Bullet {
 
   /*
    * Calculates the intersection point between two segments
-   *
+   * Reference: https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection#Given_two_points_on_each_line
    * @param PVector segmentPoint1
    * @param PVector segmentPoint2
    * @param PVector segmentPointA

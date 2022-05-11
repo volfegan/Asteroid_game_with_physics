@@ -218,7 +218,7 @@ public class Ship {
     noFill();
     float angleExaust = this.heading.heading() + PI +radians(-30);
 
-    //println(degrees(this.heading.heading()));
+    println(degrees(this.heading.heading()));
     for (int trail=this.particleTrailMin; trail < this.particleTrailSize; trail++) {
 
       float dispersion = 1.2;
@@ -229,42 +229,42 @@ public class Ship {
       //Finding good offsets to fit well the trail
       //0º to 45º
       if (degrees(this.heading.heading()) > 0 && degrees(this.heading.heading()) < 45) {
-        offsetX = 0;
+        offsetX = map(degrees(this.heading.heading()), 0, 45, 5, 0);
         offsetY = map(degrees(this.heading.heading()), 0, 45, -5, 0);
       }
       //45º to 90º
       if (degrees(this.heading.heading()) > 45 && degrees(this.heading.heading()) < 90) {
-        offsetX = map(degrees(this.heading.heading()), 45, 90, 0, -5);
+        offsetX = map(degrees(this.heading.heading()), 45, 90, 0, 0);
         offsetY = 0;
       }
       //90º to 135º
       if (degrees(this.heading.heading()) > 90 && degrees(this.heading.heading()) < 135) {
-        offsetX = -5;
+        offsetX = map(degrees(this.heading.heading()), 90, 135, 0, -5);
         offsetY = map(degrees(this.heading.heading()), 90, 135, 0, -5);
       }
       //135º to 180º
       if (degrees(this.heading.heading()) > 135 && degrees(this.heading.heading()) <= 180) {
         offsetX = map(degrees(this.heading.heading()), 135, 180, -5, -10);
-        offsetY = map(degrees(this.heading.heading()), 135, 180, -5, -10);
+        offsetY = map(degrees(this.heading.heading()), 135, 180, -5, 0);
       }
       //-180º to -135º
       if (degrees(this.heading.heading()) > -180 && degrees(this.heading.heading()) <= -135) {
         offsetX = -10;
-        offsetY = -10;
+        offsetY =  map(degrees(this.heading.heading()), -180, -135, 0, -10);
       }
       //-135º to -90º
       if (degrees(this.heading.heading()) > -135 && degrees(this.heading.heading()) <= -90) {
-        offsetX = map(degrees(this.heading.heading()), -135, -90, -10, -5);
+        offsetX = map(degrees(this.heading.heading()), -135, -90, -10, -0);
         offsetY = -10;
       }
       //-90º to -45º
       if (degrees(this.heading.heading()) > -90 && degrees(this.heading.heading()) <= -45) {
-        offsetX = map(degrees(this.heading.heading()), -90, -45, -5, -0);
+        offsetX = map(degrees(this.heading.heading()), -90, -45, -0, 5);
         offsetY = map(degrees(this.heading.heading()), -90, -45, -10, -5);
       }
       //-45º to -0º
       if (degrees(this.heading.heading()) > -45 && degrees(this.heading.heading()) <= -0) {
-        offsetX = 0;
+        offsetX = 5;
         offsetY = -5;
       }
 
